@@ -1,0 +1,197 @@
+  <!-- Modal's-->
+
+    <!-- Cadastro de usuários -->
+    <div class="modal fade" id="cadastroUsuario" tabindex="-1" aria-labelledby="cadastroUsuario" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100" id="cadastroUsuario">BEM VINDO!</h5>
+                    <button type="button" onclick="closeClearDataModal('#cadastroUsuario')" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <span class="fs-5">Cadastrar-se diretamente no nosso site</span>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="nome" class="form-control" placeholder="Nome"
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="email" class="form-control" placeholder="E-mail"
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <input type="password" class="form-control" placeholder="Senha" id="senhaCadastro">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <input type="password" class="form-control" placeholder="Confirmar senha"
+                                        id="confirmacaoSenha">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="ms-auto ">
+                                <button type="button" onclick="createUser()"
+                                    class="btn btn-secondary">Cadastrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Login-->
+    <div class="modal fade" id="loginUsuario" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <span class="fs-5">Faça o login</span>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="emailLogin" class="form-control" placeholder="E-mail" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <input type="password" id="senhaLogin" class="form-control" placeholder="Senha" id="senhaLogin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="ms-auto ">
+                                <button onclick="loginUser()" type="button" class="btn btn-secondary">Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cadastro de Receita-->
+    <div class="modal fade" id="cadastroReceita" tabindex="-1" aria-labelledby="cadastroReceita" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100">Cadastro de Receita</h5>
+                    <button type="button" onclick="closeClearDataModal('#cadastroReceita')"class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <span class="fs-5">Envie sua receita!</span>
+                        <div class="row mt-4">
+
+                            <div class="col-12">
+                                <div class="d-flex justify-content-center">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Nome da Receita"
+                                            id="cadastroNomeReceita">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="d-flex justify-content-center">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="URL da imagem"
+                                            id="cadastroUrlImagem">
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-12 col-sm-12 mb-3">
+                                <div class="bg-secondary rounded p-5 ">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p>Tempo de Preparo</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p>Porções</p>
+                                        </div>
+                                        <div class="col-3">
+                                            <input id="cadastroTempoPreparo" maxlength="3" type="text" class="form-control"
+                                                aria-label="cadastroTempoPreparo" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="col-3">
+                                            <label for="cadastroTempoPreparo" class="col-form-label">min</label>
+                                        </div>
+
+                                        <div class="col-3">
+                                            <input id="cadastroPorcoes" type="text" maxlength="3" class="form-control"
+                                                aria-label="cadastroPorcoes" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="col-3">
+                                            <label for="cadastroPorcoes" class="col-form-label">Porções</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="input-group mt-3 mb-3">
+                                            <input type="text" class="form-control" placeholder="Categoria"
+                                                id="cadastroCategoria">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <div class="text-center">
+                                    <span class="fs-5">INGREDIENTES</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <div class="form-floating ">
+                                    <textarea class="form-control p-5" placeholder="Ex: 03 ovos"
+                                        id="cadastroIngredientes"></textarea>
+                                    <label for="cadastroIngredientes">Ingredientes</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <div class="text-center">
+                                    <span class="fs-5">MODO DE PREPARO</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <div class="form-floating">
+                                    <textarea class="form-control p-5" placeholder="Ex: 03 ovos"
+                                        id="cadastroModoPreparo"></textarea>
+                                    <label for="cadastroModoPreparo">Modo de Preparo</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row justify-content-end">
+                            <button onclick="createReceita()" type="button" class="btn btn-secondary">Salvar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

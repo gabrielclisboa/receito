@@ -1,0 +1,401 @@
+* {
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+ul,
+li,p {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(232, 242, 252);
+    text-decoration: none;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+/*Área lista de alimentos*/
+
+#sideBar {
+    margin-top: 2rem;
+    background-color: rgb(254, 189, 89);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#botaoPesquiar {
+    align-items: center;
+}
+#listaAlimentos {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+}
+
+#newtask {
+    padding: 30px 20px;
+}
+
+#newtask input {
+    width: 75%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+#newtask button {
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: rgb(254, 189, 89);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#tasks {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.task {
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+}
+
+.task span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.task button {
+    background-color: #a40a0a;
+    color: #ffffff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+/*Fim área lista de alimentos*/
+
+
+/* Área cards*/
+.disabled-link{
+    cursor: default;    
+    text-decoration: none;
+}
+.receitas {
+    margin-top: 1rem;
+    justify-content:flex-start;
+    align-items: center;
+    min-height: 100vh;
+    align-items: flex-start;
+
+}
+
+
+.receita {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: 100%;
+    margin: 1%;
+    border-radius: 5px;
+    text-align: justify;
+}
+
+
+.receita:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.342);
+    width: 101%;
+    width: 101%;
+    border-radius: 5px;
+}
+
+.nomeReceita{
+    text-align: center;
+    padding: 5px;
+    color: #000000;
+}
+
+
+/* Fim cards*/
+
+
+/*Área modal*/
+
+.modal-title {
+    text-align: center;
+}
+
+.modal-header {
+    text-align: center;
+    background-color: rgb(254, 189, 89);
+}
+
+
+/*Fim Área modal*/
+
+
+/*Área página de visualização da receita*/
+
+.areaModoPreparo {
+    border: 1px solid #111111;
+    position: inherit;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: rgb(254, 189, 89);
+}
+
+.areaIngredientes {
+    border: 1px solid #111111;
+    position: inherit;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: rgb(254, 189, 89);
+}
+
+
+/*Fim área página de visualização da receita*/
+
+
+/*Área Footer*/
+footer {
+    background-color: rgb(254, 189, 89);
+    margin-top: 15px;
+    width:100%;
+    height: 4em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    bottom: 0;
+  
+}
+
+@media screen and (max-width: 1000px){
+    footer{
+        background-color: rgb(254, 189, 89);
+        margin-top: 10px;
+        width: 100%;
+        height: 4em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        bottom: 0;
+        align-self: end;
+    }
+}
+/*Fim área Footer*/
+
+
+
+/*Área main*/
+
+main{
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+/*Fim área main*/
+
+
+/*Área Header*/
+
+.header {
+    background-color: rgb(254, 189, 89);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.pesquisaNome{
+    display: flex;
+    align-items: center;
+    width:40%;
+    margin-left:4%;
+}
+
+#botaoCadastroReceita{
+    visibility: hidden;
+}
+#botaoLogin{
+    visibility:visible;
+}
+#botaoCadastroUsuario{
+    visibility: visible;
+}
+#infoUser{
+    visibility: hidden;
+    display: flex;
+    justify-content: baseline;
+}
+.botoesMenu {
+    display: block;
+    width: 170px;
+    height: 50px;
+    line-height: 17px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-align:center;
+    position: relative;
+    transition: all .35s;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        top: 0px;
+        width: 100%;
+        flex-grow: 0;
+        flex-basis: auto;
+
+    }
+    .header nav {
+        display: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .menu {
+        display: block;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+      
+    }
+    .menu li {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .menu li a {
+        text-align: center;
+        width: 100%;
+    }
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+
+    .barramenu{
+        background-color:transparent;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom:2px solid #000000;
+        color: white;
+        margin-left:4%;
+        display: block;
+        width: 100%;
+    }
+    .pesquisaNome{
+        display: flex;
+        align-items: center;
+        width:100%;
+        margin-left:4%;
+    }
+    
+}
+
+
+.botoesMenu span {
+    position: relative;
+    z-index: 2;
+}
+
+.botoesMenu:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #070707;
+    transition: all .35s;
+}
+
+.botoesMenu:hover {
+    color: #fff;
+}
+
+.botoesMenu:hover:after {
+    width: 100%;
+}
+
+.barraMenu{
+    border-bottom:2px solid #000000;
+    color: #000000;
+    background-color:transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    width: 70%;
+}
+
+
+ .barraMenu input::placeholder{
+    color: #000000;
+}
+
+
+/*Fim área Header*/
+
